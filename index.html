@@ -15,7 +15,6 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    /* Fondo con movimiento suave */
     body {
       font-family: "Poppins", sans-serif;
       background: radial-gradient(circle at top, #111827 0, #05060a 45%, #000000 100%);
@@ -23,13 +22,13 @@
       overflow-x: hidden;
       animation: bgPulse 14s ease-in-out infinite;
     }
+
     @keyframes bgPulse {
       0% { filter: brightness(1); }
       50% { filter: brightness(1.12); }
       100% { filter: brightness(1); }
     }
 
-    /* Partículas suaves y en movimiento */
     .particles {
       position: fixed;
       inset: 0;
@@ -43,6 +42,7 @@
       animation: neonSoft 18s ease-in-out infinite;
       filter: brightness(1.15);
     }
+
     @keyframes neonSoft {
       0% { transform: translate3d(0,0,0); opacity: 0.35; }
       50% { transform: translate3d(-50px,35px,0); opacity: 0.55; }
@@ -55,11 +55,13 @@
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(53,240,255,0.2);
     }
+
     .nav {
       max-width: 1100px; margin: 0 auto;
       padding: 0.8rem 1.5rem;
       display: flex; align-items: center; justify-content: space-between;
     }
+
     .nav-logo span {
       font-size: 1.6rem;
       font-weight: 700;
@@ -68,11 +70,13 @@
       animation: pulseGlow 3s infinite alternate, slideIn 1.5s ease forwards;
       letter-spacing: 0.12em;
     }
+
     @keyframes pulseGlow {
       0% { text-shadow: 0 0 10px var(--primary), 0 0 20px var(--accent); }
       50% { text-shadow: 0 0 20px var(--accent), 0 0 40px var(--primary); }
       100% { text-shadow: 0 0 10px var(--primary), 0 0 20px var(--accent); }
     }
+
     @keyframes slideIn {
       from { opacity: 0; transform: translateX(-40px); }
       to { opacity: 1; transform: translateX(0); }
@@ -85,11 +89,13 @@
       transition: color 0.3s ease, transform 0.3s ease;
       animation: navGlow 7s ease-in-out infinite;
     }
+
     @keyframes navGlow {
       0% { text-shadow: 0 0 4px var(--primary); }
       50% { text-shadow: 0 0 12px var(--accent); }
       100% { text-shadow: 0 0 4px var(--primary); }
     }
+
     .nav-links a:hover {
       color: var(--accent);
       transform: translateY(-2px);
@@ -113,6 +119,7 @@
       letter-spacing: 0.12em;
       animation: titleFloat 6s ease-in-out infinite;
     }
+
     @keyframes titleFloat {
       0% { transform: translateY(0); }
       50% { transform: translateY(-6px); }
@@ -124,6 +131,7 @@
       margin-bottom: 0.4rem;
       animation: textGlow 8s ease-in-out infinite;
     }
+
     @keyframes textGlow {
       0% { opacity: 0.85; }
       50% { opacity: 1; }
@@ -135,23 +143,25 @@
       grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
       gap: 2rem; align-items: center;
     }
+
     .hero-right img {
       width: 200px; height: 200px; border-radius: 50%;
       object-fit: cover; border: 4px solid var(--accent);
       animation: float 6s ease-in-out infinite;
     }
+
     .hero-right .cruz {
       width: 200px; height: 200px; border-radius: 12px;
       object-fit: contain; animation: float 7s ease-in-out infinite;
     }
+
     @keyframes float {
       0% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
       100% { transform: translateY(0); }
     }
 
-    /* Botones futuristas suaves */
-    .btn, .downloads a, .news-box a {
+    .btn, .downloads a {
       display: inline-block;
       padding: 0.75rem 1.8rem;
       border-radius: 999px;
@@ -165,13 +175,13 @@
       text-align: center;
       animation: btnPulse 4s ease-in-out infinite;
     }
+
     @keyframes btnPulse {
       0% { box-shadow: 0 0 10px rgba(53,240,255,0.3); }
       50% { box-shadow: 0 0 22px rgba(255,60,247,0.45); transform: scale(1.03); }
       100% { box-shadow: 0 0 10px rgba(53,240,255,0.3); }
     }
 
-    /* Descargas más separadas */
     .downloads {
       margin-top: 2rem;
       display: flex;
@@ -181,13 +191,13 @@
       padding: 1rem 0;
     }
 
-    /* Imágenes acreditada y futurista */
     .img-block {
       display: flex;
       justify-content: center;
       gap: 2.5rem;
       margin-top: 1.5rem;
     }
+
     .img-block img {
       width: 30%;
       max-width: 260px;
@@ -195,13 +205,13 @@
       border: 2px solid var(--primary);
       animation: imgFloat 12s ease-in-out infinite;
     }
+
     @keyframes imgFloat {
       0% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
       100% { transform: translateY(0); }
     }
 
-    /* Insignia EPTI */
     .epti-small {
       display: block;
       margin: 2rem auto;
@@ -213,7 +223,6 @@
       animation: imgFloat 12s ease-in-out infinite;
     }
 
-    /* Noticias */
     .news-box {
       padding: 2.2rem;
       border-radius: 16px;
@@ -236,6 +245,29 @@
       font-size: 0.8rem;
       color: #9ca3af;
       animation: textGlow 8s ease-in-out infinite;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      padding: 1.5rem;
+      border-radius: 14px;
+      border: 1px solid rgba(53,240,255,0.35);
+      background: radial-gradient(circle at top, #0b1120 0, #020617 55%);
+    }
+
+    .banner {
+      width: 100%;
+      max-width: 900px;
+      display: block;
+      margin: 1.5rem auto 0;
+      border-radius: 12px;
+      border: 1px solid rgba(53,240,255,0.35);
     }
   </style>
 </head>
@@ -276,8 +308,9 @@
             Mi trayectoria integra la práctica asistencial con el análisis funcional de sistemas HIS, la gestión de
             información biomédica y la evaluación de proyectos TI.
           </p>
+
           <div class="btn-row">
-            <a class="btn" href="cv-profesional-informatica-biomedica-tens.pdf" target="_blank">
+            <a class="btn" href="curriculum-vitae-melissa-zamorano.pdf" target="_blank">
               Descargar CV profesional
             </a>
           </div>
@@ -336,9 +369,13 @@
       </div>
 
       <div class="downloads">
-        <a href="certificado-titulo-tecnico-superior-enfermería.pdf" target="_blank">Título TENS</a>
+        <a href="certificado-de-titulo-tecnico-superior-de-enfermeria-melissa-zamorano.pdf" target="_blank">
+          Título TENS
+        </a>
         <a href="certificado-vacuna-hepatitis-b-tens.pdf" target="_blank">Vacuna Hepatitis B</a>
-        <a href="certificado-inscripcion-prestadores-individuales-salud.pdf" target="_blank">Registro prestadores</a>
+        <a href="registro-nacional-de-prestadores-individuales-de-salud.pdf" target="_blank">
+          Registro prestadores
+        </a>
       </div>
     </section>
 
@@ -369,7 +406,9 @@
       </div>
 
       <div class="downloads">
-        <a href="certificado-tecnologa-informatica-biomedica.pdf" target="_blank">Título Tecnóloga en Informática Biomédica</a>
+        <a href="certificado-de-titulo-tecnologa-en-informatica-biomedica-melissa-zamorano.pdf" target="_blank">
+          Título Tecnóloga en Informática Biomédica
+        </a>
       </div>
     </section>
 
@@ -409,7 +448,7 @@
       <div class="card">
         <ul>
           <li><a href="curso-acceso-y-uso-de-la-información-científica-en-salud.pdf" target="_blank">Acceso y uso de la información científica en salud</a></li>
-                   <li><a href="curso-sistemas-informacion-salud.pdf" target="_blank">Sistemas de información en salud</a></li>
+          <li><a href="curso-sistemas-informacion-salud.pdf" target="_blank">Sistemas de información en salud</a></li>
           <li><a href="curso-interoperabilidad-estandar-fhir.pdf" target="_blank">Interoperabilidad FHIR</a></li>
           <li><a href="curso-cie11.pdf" target="_blank">Clasificación CIE-11</a></li>
           <li><a href="curso-control-infecciones-emergencias.pdf" target="_blank">Control de infecciones en emergencias</a></li>
@@ -474,5 +513,3 @@
   </footer>
 </body>
 </html>
-
-         
